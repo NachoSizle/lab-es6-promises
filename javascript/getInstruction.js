@@ -21,10 +21,10 @@ function getInstruction(food, step, callback, errorCallback) {
       };
 
       // Invoke the provided callback or errorCallback
-      if (!instruction) {
-        errorCallback("Instruction step does not exist!");
-      } else {
+      if (instruction) {
         callback(instruction);
+      } else {
+        errorCallback("Instruction step does not exist!");
       }
 
     }, Math.floor(Math.random() * 1000));
