@@ -190,6 +190,20 @@ function showPromiseAllInstructions() {
     promiseArr.push(promise)
   }
 
+  // try {
+  //   const steps = await Promise.all(promiseArr)
+  //   steps.forEach((step, i) => {
+  //     if (i === broccoli.length - 1) {
+  //       showFinalInstruction('broccoli', step)
+  //     } else {
+  //       addStep('broccoli', step)
+  //     }
+  //   })
+  //   addStep('broccoli', 'Dinner is served!')
+  // } catch(err) {
+  //   showError(err)
+  // }
+
   Promise.all(promiseArr)
     .then((steps) => {
       steps.forEach((step, i) => {
